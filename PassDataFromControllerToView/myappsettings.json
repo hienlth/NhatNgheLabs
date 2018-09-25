@@ -1,0 +1,11 @@
+﻿{
+  "Message": "Nhất Nghệ - ASP.NET Core 2.0",
+  "MyConfigs": {
+    "Config1": "Nhất Nghệ",
+    "Config2": "105 Bà Huyện Thanh Quan",
+    "Config3": "(+84) 028393 22735"
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=_CHANGE_ME;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+}

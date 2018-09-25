@@ -34,6 +34,21 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    @{
+                        KhachHang kh = Context.Session.Get<KhachHang>("KhachHang");
+                    }
+                    @if (kh == null)
+                    {
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a asp-action="Login" asp-controller="Member"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    }
+                    else
+                    {
+                        <li><a>Xin chào <b>@kh.HoTen</b></a></li>
+                        <li><a asp-action="Logout" asp-controller="Member"><span class="glyphicon glyphicon-log-out"></span> Thoát</a></li>
+                    }
+                </ul>
             </div>
         </div>
     </nav>

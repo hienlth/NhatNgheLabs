@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "ChiTiet";
+}
+
+<h2>Thông tin Sản phẩm</h2>
+<table class="table-condensed">
+    <tr>
+        <td>Mã</td>
+        <td>@ViewBag.HangHoa.MaHH</td>
+    </tr>
+    <tr>
+        <td>Tên</td>
+        <td>@ViewBag.HangHoa.TenHH</td>
+    </tr>
+    <tr>
+        <td>Đơn giá</td>
+        <td>@ViewBag.HangHoa.DonGia.ToString("#,##0") đ</td>
+    </tr>
+    <tr>
+        <td>Số lượng</td>
+        <td>@ViewBag.HangHoa.SoLuong</td>
+    </tr>
+    <tr>
+        <td>Hình</td>
+        <td>
+            <img src="~/images/@ViewBag.HangHoa.Hinh" />
+        </td>
+    </tr>
+</table>
+

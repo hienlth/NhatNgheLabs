@@ -1,0 +1,36 @@
+﻿@using Microsoft.AspNetCore.Http
+@{
+    ViewData["Title"] = "DemoSession";
+}
+
+<h2>DemoSession</h2>
+
+<h3>@Context.Session.GetString("message") - Năm thành lập: @Context.Session.GetInt32("year")</h3>
+@{ 
+    HangHoa hh = Context.Session.Get<HangHoa>("product");
+}
+<h2>Thông tin Sản phẩm</h2>
+<table class="table-condensed">
+    <tr>
+        <td>Mã</td>
+        <td>@hh.MaHH</td>
+    </tr>
+    <tr>
+        <td>Tên</td>
+        <td>@hh.TenHH</td>
+    </tr>
+    <tr>
+        <td>Đơn giá</td>
+        <td>@hh.DonGia.ToString("#,##0") đ</td>
+    </tr>
+    <tr>
+        <td>Số lượng</td>
+        <td>@hh.SoLuong</td>
+    </tr>
+    <tr>
+        <td>Hình</td>
+        <td>
+            <img src="~/images/@hh.Hinh" />
+        </td>
+    </tr>
+</table>
